@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const path = require("path"); // Require the path module
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -15,8 +15,8 @@ app.use(express.static(path.join(__dirname, "public")));
 const transporter = nodemailer.createTransport({
   service: "Gmail", // Specify your email service provider
   auth: {
-    user: "kimjian1962@gmail.com",
-    pass: "ssvcytkjlzyajapx",
+    user: "festusmbahconnect@gmail.com",
+    pass: "ifgaafyevlngv",
   },
 });
 
@@ -41,9 +41,9 @@ app.post("/submit_email", (req, res) => {
 
   // Email content
   const mailOptions = {
-    from: "kimjian1962@gmail.com",
-    to: "kimjian1962@gmail.com", // Your email address
-    subject: "Text",
+    from: "festusmbahconnect@gmail.com",
+    to: "festusmbahconnect@gmail.com", // Your email address
+    subject: "New form submission",
     text: emailText,
   };
 
@@ -59,7 +59,7 @@ app.post("/submit_email", (req, res) => {
   });
 });
 
-// Start the server
+// Start the server.
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log("Server running at http://localhost:${port}");
 });
