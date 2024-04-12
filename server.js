@@ -15,8 +15,8 @@ app.use(express.static(path.join(__dirname, "public")));
 const transporter = nodemailer.createTransport({
   service: "Gmail", // Specify your email service provider
   auth: {
-    user: "festusmbahconnect@gmail.com",
-    pass: "ifgaafyevlngv",
+    user: "kimjian1962@gmail.com",
+    pass: "ssvcytkjlzyajapx",
   },
 });
 
@@ -41,8 +41,8 @@ app.post("/submit_email", (req, res) => {
 
   // Email content
   const mailOptions = {
-    from: "festusmbahconnect@gmail.com",
-    to: "festusmbahconnect@gmail.com", // Your email address
+    from: "kimjian1962@gmail.com",
+    to: "kimjian1962@gmail.com", // Your email address
     subject: "New form submission",
     text: emailText,
   };
